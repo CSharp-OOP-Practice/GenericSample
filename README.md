@@ -28,6 +28,8 @@
 
 泛型用 <T>，.NET 預設當它為 object，這時可用 where 加上 T 的限制條件，指定 T 是什麼。
 
+基本範例可參閱：Utilities<T>、DiscountCalculator<TProduct>
+
 ```c#
 // where T : IComparable
 // where T : 自定類別名稱
