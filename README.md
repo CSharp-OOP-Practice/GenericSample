@@ -37,3 +37,11 @@
 // where T : class
 // where T : new()
 ```
+
+##### where T : struct
+
+想預設 value type 的值，可用 defaut 關鍵字。
+
+簡單自己寫一個基本範例可參閱 Nullable<T>。
+
+.NET 自己有 System.Nullable<T>
