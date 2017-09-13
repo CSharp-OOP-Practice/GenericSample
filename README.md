@@ -21,3 +21,17 @@
 像是 System.Collections.Generic.Dictionary 用來裝索引鍵和值的集合。
 
 基本範例 GenericDictionary<Tkey, TValue>，僅重現 Dictionary 的 Add 方法殼。
+
+### Other 小技巧
+
+#### where
+
+泛型用 <T>，.NET 預設當它為 object，這時可用 where 加上 T 的限制條件，指定 T 是什麼。
+
+```c#
+// where T : IComparable
+// where T : 自定類別名稱
+// where T : struct
+// where T : class
+// where T : new()
+```

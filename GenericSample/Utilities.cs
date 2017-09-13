@@ -2,15 +2,19 @@
 
 namespace GenericSample
 {
-    public class Utilities
+    // where T : IComparable
+    // where T : 自定類別名稱
+    // where T : struct
+    // where T : class
+    // where T : new()
+    public class Utilities<T> where T : IComparable
     {
         public int Max(int a, int b)
         {
             return a > b ? a : b;
         }
 
-        // 利用 where 加入 T 的限制
-        public T Max<T>(T a, T b) where T : IComparable
+        public T Max(T a, T b)
         {
             return a.CompareTo(b) > 0 ? a : b;
         }
