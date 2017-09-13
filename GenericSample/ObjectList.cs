@@ -3,9 +3,25 @@
 namespace GenericSample
 {
     /// <summary>
-    /// .NET 1.0 沒有 generic 時的做法
+    /// 用泛型改寫 ObjectList
     /// </summary>
-    /// TODO: 將此class加入泛型改寫
+    /// 透過泛型，不再有boxing、unboxing效能問題
+    public class GenericList<T>
+    {
+        private T _value;
+
+        public void Add(T value)
+        {
+            this._value = value;
+        }
+
+        public T this[int index]
+        {
+            get { throw new NotImplementedException(); }
+        }
+    }
+
+
     public class ObjectList
     {
         private object _value;
