@@ -1,4 +1,6 @@
-﻿namespace GenericSample
+﻿using System;
+
+namespace GenericSample
 {
     public class Utilities
     {
@@ -7,10 +9,10 @@
             return a > b ? a : b;
         }
 
-        // TODO: 目前傳入的參數無法比較
-        public T Max<T>(T a, T b)
+        // 利用 where 加入 T 的限制
+        public T Max<T>(T a, T b) where T : IComparable
         {
-            return a > b ? a : b;
+            return a.CompareTo(b) > 0 ? a : b;
         }
     }
 }
