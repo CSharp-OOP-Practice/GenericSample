@@ -45,3 +45,17 @@
 簡單自己寫一個基本範例可參閱 Nullable<T>。
 
 .NET 自己有 System.Nullable<T>
+
+##### where T : IComparable 或 自定類別名稱
+
+用在當有需要在方法內傳入的 T 參數屬性。
+
+基本範例可參考 DiscountCalculator<TProduct>
+
+PS：無法在方法裡面直接 new T()
+
+##### where T : new()
+
+當需要在方法裡面 new T()，那就必須使用 where T : new()，否則 compile 不知道 T 是誰，無法 new。
+
+基本範例可參考 Utilities 裡面的 DoSomething(T)
