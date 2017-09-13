@@ -3,6 +3,19 @@
 namespace GenericSample
 {
     /// <summary>
+    /// 寫一個 Dictionary
+    /// </summary>
+    /// <typeparam name="TKey"></typeparam>
+    /// <typeparam name="TValue"></typeparam>
+    public class GenericDictionary<TKey, TValue>
+    {
+        public void Add(TKey key, TValue value)
+        {
+            
+        }
+    }
+
+    /// <summary>
     /// 用泛型改寫 ObjectList
     /// </summary>
     /// 透過泛型，不再有boxing、unboxing效能問題
